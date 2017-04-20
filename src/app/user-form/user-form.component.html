@@ -3,16 +3,15 @@
     <h5 class="breadcrumbs-title">{{ titulo }}</h5>
 
     <div class="row">
-      <form class="col s12" [formGroup]="userForm" (ngSubmit)="submitForm(userForm.value)">
+      <form class="col s12">
         <div class="row">
-          <div class="input-field col s6">
-            <label class="center-block">Name:
-            <input type="text" class="form-control" [formControl]="userForm.controls['nome']" />
-            </label>
-          </div>
-          <div class="input-field col s6">
-            
 
+          <div class="input-field col s6">
+            <div *ngIf="user">
+              <h2>Olá, {{user.nome}}</h2>
+
+
+            </div>
           </div>
         </div>
 
